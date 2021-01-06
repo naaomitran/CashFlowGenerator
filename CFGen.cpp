@@ -3,6 +3,35 @@
 
 using namespace std;
 
+class BalanceSheet {
+    public:
+        string assets[];
+    
+    void enter() {
+        string type;
+        int count;
+
+        cout << "Enter number of current assets: " << endl;
+        cin >> count;
+
+        for (int i = 0; i < count ; i++) {
+        cout << "Enter type of asset: " << endl;
+        getline(cin, type);
+        assets[i] = type;
+        doChange(type);
+        }
+    }
+
+    int doChange(string asset) {
+        int change;
+        int opResult;
+        cout << "Enter change in " << asset << " (previous year - current year): " << endl;
+        cin >> change;
+        opResult += change;
+
+    }
+};
+
 int main() {
 
     int opResult;
